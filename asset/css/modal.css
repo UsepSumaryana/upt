@@ -1,0 +1,23 @@
+.modal-header, h4, .close {
+      background-color: #0097A7;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-footer {
+      background-color: #f9f9f9;
+  }
+
+  #mymodal{
+    background-color: rgba(0,0,0,0.7);
+  }
+
+form input{
+  height: 50px;
+}
+  form .btn{
+    height: 50px;
+  }
+  form .btn-success{
+    background-color: #0097A7 !important;
+  }

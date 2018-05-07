@@ -1,0 +1,16 @@
+.input-group-addon{ 
+  background-color: #ffff00;
+  border: 0;
+}
+.icon{
+  background-color: yellow;
+  border:none;
+  width: 0px;
+  -webkit-transition: all .5s ease;
+   -moz-transition: all .5s ease;
+   transition: all .5s ease;
+}
+.icon:focus{
+  width: 100px;
+  z-index: 100;
+}
