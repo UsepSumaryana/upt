@@ -75,48 +75,86 @@
 
 				<div class="span9">
 					<div class="content">
-                        <div class="module">
+
+						<div class="module">
 							<div class="module-head">
-								<h3>Management Akun UPT</h3>
+								<h3>Tambah Akun UPT</h3>
 							</div>
 							<div class="module-body">
-                               <div class=" clearfix">
-                                   <div class="pull-right">
-                                        <a href="tambah_akunupt" class="btn btn-success"><i class="icon-plus">&nbsp Tambah Akun</i></a>
-                                    </div>
-                                </div>
-                                <hr>
-								<table class="table table-striped table-bordered table-condensed">
-								  <thead>
-									<tr>
-									  <th>No</th>
-									  <th>Nama UPT Sarpan</th>
-									  <th>Nama Petugas</th>
-									  <th>Username</th>
-									  <th class="span2 align-center">Aksi</th>
-									</tr>
-								  </thead>
-								  <tbody>
-                                      <?php foreach($t_petugas as $u){ ?>
-									<tr>
-									  <td><?php echo $u->id_petugas ?></td>
-									  <td><?php echo $u->nama_sarana ?></td>
-									  <td><?php echo $u->nama_petugas ?></td>
-									  <td>@<?php echo $u->username ?></td>
-									  <td class="align-center">
-                                        <button class="btn btn-mini btn-warning"><i class="icon-edit"></i></button> | 
-                                        <button class="btn btn-mini btn-danger"><i class="icon-trash"></i></button>
-                                      </td>
-									</tr>
-                                      <?php } ?>
-								  </tbody>
-								</table>
+									
+									<div class="alert alert-error hidden"><!--unhide pada saat ada data yang belum diisi/tidak sesuai-->
+										<button type="button" class="close" data-dismiss="alert">×</button>
+										<strong>Oh snap!</strong> Whats wrong with you? 
+									</div>
+									<div class="alert alert-success hidden"><!--unhide pada saat ada data prosses berhasil-->
+										<button type="button" class="close" data-dismiss="alert">×</button>
+										<strong>Well done!</strong> Now you are listening me :) 
+									</div>
 
-								<br/>
-								
-								<br>
+									<br />
+
+									<form class="form-horizontal row-fluid">
+										<div class="control-group">
+											<label class="control-label" for="basicinput">No</label>
+											<div class="controls">
+												<input type="text" id="basicinput" placeholder="id petugas" class="span2">
+											</div>
+										</div>
+                                        <div class="control-group">
+											<label class="control-label" for="basicinput">Nama Petugas</label>
+											<div class="controls">
+												<input type="text" id="basicinput" placeholder="Nama" class="span4">
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="basicinput">Sarana</label>
+											<div class="controls">
+												<select tabindex="1" data-placeholder="Select here.." class="span5">
+													<option value="">Pilih Sarana</option>
+													<option value="Category 1">First Row</option>
+													<option value="Category 2">Second Row</option>
+													<option value="Category 3">Third Row</option>
+													<option value="Category 4">Fourth Row</option>
+												</select>
+                                                <input type="text" id="id" placeholder="Id Sarana" class="span2" disabled>
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="basicinput">Username</label>
+											<div class="controls">
+												<input type="text" id="basicinput" placeholder="Isi Username" class="span4">
+											</div>
+										</div>
+                                        <div class="control-group">
+											<label class="control-label" for="basicinput">Password</label>
+											<div class="controls">
+												<input type="password" id="basicinput" placeholder="Isi Password" class="span4">
+											</div>
+										</div>
+                                        <div class="control-group">
+											<label class="control-label">Level</label>
+											<div class="controls">
+												<label class="radio inline">
+													<input type="radio" name="optionsRadios" id="optionsRadios1" value="admin" checked="">
+													admin
+												</label> 
+												<label class="radio inline">
+													<input type="radio" name="optionsRadios" id="optionsRadios2" value="upt">
+													upt
+												</label> 
+											</div>
+										</div>
+										<div class="control-group">
+											<div class="controls">
+												<button type="submit" class="btn">Submit Form</button>
+											</div>
+										</div>
+									</form>
 							</div>
 						</div>
+
+						
+						
 					</div><!--/.content-->
 				</div><!--/.span9-->
 			</div>

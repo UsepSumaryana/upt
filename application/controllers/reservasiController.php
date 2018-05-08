@@ -8,8 +8,7 @@ class ReservasiController extends CI_Controller {
 		$this->load->model('m_reservasi');
 	}
 	
-    public function index()
-	{
+    public function index(){
         $data['t_reservasi'] = $this->m_reservasi->ambil_data();
 		$this->load->view('reservasi',$data);
 	}
