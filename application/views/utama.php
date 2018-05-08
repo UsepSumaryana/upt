@@ -11,7 +11,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="asset/css/style.css">
   <link rel="stylesheet" type="text/css" href="asset/css/modal.css">
-   <link rel="stylesheet" type="text/css" href="css/theme.css">
   <style>
   .carousel-inner img {
       width: 100%;

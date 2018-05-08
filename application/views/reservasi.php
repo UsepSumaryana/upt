@@ -113,106 +113,18 @@
 									</tr>
 								  </thead>
 								  <tbody>
+                                      <?php foreach($t_reservasi as $u){ ?>
 									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
+									  <td><?php echo $u->id_reservasi ?></td>
+									  <td><?php echo $u->nama_sarana ?></td>
+									  <td><?php echo $u->nama_petugas ?></td>
+									  <td><?php echo $u->username ?></td>
 									  <td class="align-center">
                                         <button class="btn btn-mini btn-success"><i class="icon-ok"></i></button> | 
                                         <button class="btn btn-mini btn-danger"><i class="icon-remove"></i></button>
                                       </td>
 									</tr>
-									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
-									  <td class="align-center">
-                                        <button class="btn btn-mini btn-success"><i class="icon-ok"></i></button> | 
-                                        <button class="btn btn-mini btn-danger"><i class="icon-remove"></i></button>
-                                      </td>
-									</tr>
-									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
-									  <td class="align-center">
-                                        <button class="btn btn-mini btn-success"><i class="icon-ok"></i></button> | 
-                                        <button class="btn btn-mini btn-danger"><i class="icon-remove"></i></button>
-                                      </td>
-									</tr>
-									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
-									  <td class="align-center">
-                                        <button class="btn btn-mini btn-success"><i class="icon-ok"></i></button> | 
-                                        <button class="btn btn-mini btn-danger"><i class="icon-remove"></i></button>
-                                      </td>
-									</tr>
-									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
-									  <td class="align-center">
-                                        <button class="btn btn-mini btn-success"><i class="icon-ok"></i></button> | 
-                                        <button class="btn btn-mini btn-danger"><i class="icon-remove"></i></button>
-                                      </td>
-									</tr>
-									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
-									  <td class="align-center">
-                                        <button class="btn btn-mini btn-success"><i class="icon-ok"></i></button> | 
-                                        <button class="btn btn-mini btn-danger"><i class="icon-remove"></i></button>
-                                      </td>
-									</tr>
-									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
-									  <td class="align-center">
-                                        <button class="btn btn-mini btn-success"><i class="icon-ok"></i></button> | 
-                                        <button class="btn btn-mini btn-danger"><i class="icon-remove"></i></button>
-                                      </td>
-									</tr>
-									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
-									  <td class="align-center">
-                                        <button class="btn btn-mini btn-success"><i class="icon-ok"></i></button> | 
-                                        <button class="btn btn-mini btn-danger"><i class="icon-remove"></i></button>
-                                      </td>
-									</tr>
-									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
-									  <td class="align-center">
-                                        <button class="btn btn-mini btn-success"><i class="icon-ok"></i></button> | 
-                                        <button class="btn btn-mini btn-danger"><i class="icon-remove"></i></button>
-                                      </td>
-									</tr>
-									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
-									  <td class="align-center">
-                                        <button class="btn btn-mini btn-success"><i class="icon-ok"></i></button> | 
-                                        <button class="btn btn-mini btn-danger"><i class="icon-remove"></i></button>
-                                      </td>
-									</tr>
+                                      <?php } ?>
 								  </tbody>
 								</table>
 
