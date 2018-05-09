@@ -56,6 +56,6 @@ $route['dashboard'] = 'homeController';
 $route['penjadwalan'] = 'jadwalController';
 $route['reservasi'] = 'reservasiController';
 $route['akunupt'] = 'akunUptController';
-$route['laporan'] = 'akunUptController';
+$route['laporan'] = 'laporanController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
