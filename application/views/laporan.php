@@ -117,76 +117,20 @@
 									  <th>No</th>
 									  <th>Sarana Olahraga</th>
 									  <th>Pengguna</th>
-									  <th>Tanggal</th>
-									  <th>Pukul</th>
+									  <th>Tanggal dan waktu</th>
 									  <th>Tujuan</th>
 									</tr>
 								  </thead>
 								  <tbody>
+                                      <?php foreach($t_reservasi as $u){ ?>
 									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-                                      <td>@mdo</td>
-                                      <td>@mdo</td>
-                                      <td>@mdo</td>
+									  <td><?php echo $u->id_reservasi ?></td>
+									  <td><?php echo $u->nama_sarana ?></td>
+									  <td><?php echo $u->nama_lengkap ?></td>
+                                      <td>@<?php echo $u->tgl_reservasi ?></td>
+                                      <td>@<?php echo $u->tujuan ?></td>
 									</tr>
-									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-                                      <td>@mdo</td>
-                                      <td>@mdo</td>
-                                      <td>@mdo</td>
-									</tr>
-                                      <tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-                                      <td>@mdo</td>
-                                      <td>@mdo</td>
-                                      <td>@mdo</td>
-									</tr>
-                                      <tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-                                      <td>@mdo</td>
-                                      <td>@mdo</td>
-                                      <td>@mdo</td>
-									</tr>
-                                      <tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-                                      <td>@mdo</td>
-                                      <td>@mdo</td>
-                                      <td>@mdo</td>
-									</tr>
-                                      <tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-                                      <td>@mdo</td>
-                                      <td>@mdo</td>
-                                      <td>@mdo</td>
-									</tr>
-                                      <tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-                                      <td>@mdo</td>
-                                      <td>@mdo</td>
-                                      <td>@mdo</td>
-									</tr>
-                                      <tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-                                      <td>@mdo</td>
-                                      <td>@mdo</td>
-                                      <td>@mdo</td>
-									</tr>
+                                      <?php } ?>
 								</table>
                                 <hr>
 								<a class="btn btn-large btn-success pull-right"><i class="icon-print"></i> Cetak</a>

@@ -121,116 +121,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									</tr>
 								  </thead>
 								  <tbody>
+                                      <?php foreach($t_sarana as $u){ ?>
 									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
-									  <td>@mdo</td>
+									  <td><?php echo $u->id_sarana ?></td>
+									  <td><?php echo $u->nama_sarana ?></td>
+									  <td><?php echo $u->jenis_olahraga ?></td>
+									  <td><?php echo $u->alamat ?></td>
+									  <td><?php echo $u->gambar ?></td>
 									  <td class="align-center">
                                         <button class="btn btn-mini btn-warning"><i class="icon-edit"></i></button> | 
                                         <button class="btn btn-mini btn-danger"><i class="icon-trash"></i></button>
                                       </td>
 									</tr>
-									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
-									  <td>@mdo</td>
-									  <td class="align-center">
-                                        <button class="btn btn-mini btn-warning"><i class="icon-edit"></i></button> | 
-                                        <button class="btn btn-mini btn-danger"><i class="icon-trash"></i></button>
-                                      </td>
-									</tr>
-									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
-									  <td>@mdo</td>
-									  <td class="align-center">
-                                        <button class="btn btn-mini btn-warning"><i class="icon-edit"></i></button> | 
-                                        <button class="btn btn-mini btn-danger"><i class="icon-trash"></i></button>
-                                      </td>
-									</tr>
-									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
-									  <td>@mdo</td>
-									  <td class="align-center">
-                                        <button class="btn btn-mini btn-warning"><i class="icon-edit"></i></button> | 
-                                        <button class="btn btn-mini btn-danger"><i class="icon-trash"></i></button>
-                                      </td>
-									</tr>
-									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
-									  <td>@mdo</td>
-									  <td class="align-center">
-                                        <button class="btn btn-mini btn-warning"><i class="icon-edit"></i></button> | 
-                                        <button class="btn btn-mini btn-danger"><i class="icon-trash"></i></button>
-                                      </td>
-									</tr>
-									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
-									  <td>@mdo</td>
-									  <td class="align-center">
-                                        <button class="btn btn-mini btn-warning"><i class="icon-edit"></i></button> | 
-                                        <button class="btn btn-mini btn-danger"><i class="icon-trash"></i></button>
-                                      </td>
-									</tr>
-									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
-									  <td>@mdo</td>
-									  <td class="align-center">
-                                        <button class="btn btn-mini btn-warning"><i class="icon-edit"></i></button> | 
-                                        <button class="btn btn-mini btn-danger"><i class="icon-trash"></i></button>
-                                      </td>
-									</tr>
-									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
-									  <td>@mdo</td>
-									  <td class="align-center">
-                                        <button class="btn btn-mini btn-warning"><i class="icon-edit"></i></button> | 
-                                        <button class="btn btn-mini btn-danger"><i class="icon-trash"></i></button>
-                                      </td>
-									</tr>
-									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
-									  <td>@mdo</td>
-									  <td class="align-center">
-                                        <button class="btn btn-mini btn-warning"><i class="icon-edit"></i></button> | 
-                                        <button class="btn btn-mini btn-danger"><i class="icon-trash"></i></button>
-                                      </td>
-									</tr>
-									<tr>
-									  <td>1</td>
-									  <td>Mark</td>
-									  <td>Otto</td>
-									  <td>@mdo</td>
-									  <td>@mdo</td>
-									  <td class="align-center">
-                                        <button class="btn btn-mini btn-warning"><i class="icon-edit"></i></button> | 
-                                        <button class="btn btn-mini btn-danger"><i class="icon-trash"></i></button>
-                                      </td>
-									</tr>
+                                      <?php } ?>
 								  </tbody>
 								</table>
 
