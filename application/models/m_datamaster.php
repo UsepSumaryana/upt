@@ -11,4 +11,22 @@ class M_datamaster extends CI_Model{
         return $data->result(); //mengembalikan data
 
 	}
+
+	public function tambah_data($data)
+	{
+		$this->db->insert('t_sarana', $data);
+	}
+
+  public function select_data($id)
+  {
+    $this->db->where('id_sarana', $id);
+    $data = $this->db->get('t_sarana');
+    return $data->result();
+  }
+
+  public  function edit_data($id, $data)
+  {
+    $this->db->where('id_sarana', $id);
+    $this->db->update('t_sarana', $data);
+  }
 }

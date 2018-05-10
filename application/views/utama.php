@@ -99,17 +99,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <h4><span class="glyphicon glyphicon-lock"></span > Login</h4>
             </div>
             <div class="modal-body" style="padding:40px 50px;">
-              <form role="form" action="index">
+              <form method="post" action="<?php echo base_url('authentication/auth/login'); ?>" role="login">
+                 <?php
+      //menampilkan error menggunakan alert javascript
+        if(isset($error)){
+        echo '<script>
+        alert("'.$error.'");
+        </script>';
+        }
+      ?>
                 <div class="form-group">
                   <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
-                  <input type="text" class="form-control" id="usrname" placeholder="Masukan Username">
+                  <input type="text" name="username" class="form-control" id="usrname" placeholder="Masukan Username">
                 </div>
                 <div class="form-group">
                   <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-                  <input type="text" class="form-control" id="psw" placeholder="Masukan Password">
+                  <input type="text" name="password" class="form-control" id="psw" placeholder="Masukan Password">
                 </div>
                 
-                <button href="index.htm" type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+                <button type="submit" name="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
                 <button type="submit" class="btn btn-danger btn-block" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
               </form>
             </div>
