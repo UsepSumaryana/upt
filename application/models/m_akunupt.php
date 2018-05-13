@@ -12,8 +12,21 @@ class M_akunupt extends CI_Model{
         return $data->result(); //mengembalikan data
 
 	}
-    function hapus_data($where,$table){
-		$this->db->where($where);
-		$this->db->delete($table);
-	}
+  public function tambah_data($data)
+  {
+    $this->db->insert('t_petugas', $data);
+  }
+
+  public function select_data($id)
+  {
+    $this->db->where('id_petugas', $id);
+    $data = $this->db->get('t_petugas');
+    return $data->result();
+  }
+
+  public  function edit_data($id, $data)
+  {
+    $this->db->where('id_petugas', $id);
+    $this->db->update('t_petugas', $data);
+  }
 }

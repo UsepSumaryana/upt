@@ -11,7 +11,9 @@ class LaporanController extends CI_Controller {
 	public function index()
 	{
         $data['t_reservasi'] = $this->m_laporan->ambil_data();
-		$this->load->view('laporan',$data);
+        $this->load->view('template/header');
+		$this->load->view('laporan/laporan',$data);
+		$this->load->view('template/footer');
 	}
 
 }

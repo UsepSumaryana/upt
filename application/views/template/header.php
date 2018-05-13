@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="span3">
                         <div class="sidebar">
                             <ul class="widget widget-menu unstyled">
-                                <li class="active"><a href="index.html"><i class="menu-icon icon-dashboard"></i>Home
+                                <li class="active"><a href="home"><i class="menu-icon icon-dashboard"></i>Home
                                 </a></li>
                                 <li><a href="datamaster"><i class="menu-icon icon-bullhorn"></i>Data Master </a>
                                 </li>

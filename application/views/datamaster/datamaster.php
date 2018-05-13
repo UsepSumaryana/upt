@@ -7,7 +7,7 @@
 			<div class="module-body">
 				<div class=" clearfix">
 					<div class="pull-left">
-						<form class="form-horizontal row-fluid input-append" action="#">
+						<form class="form-horizontal row-fluid input-append" action="#" enctype="multipart/form-data" >
 							<div class="control-group">
 								<label class="control-label" for="basicinput">Nama Sarana Olahraga</label>
 								<div class="controls">
@@ -45,9 +45,9 @@
 							<td><?php echo $u->nama_sarana ?></td>
 							<td><?php echo $u->jenis_olahraga ?></td>
 							<td><?php echo $u->alamat ?></td>
-							<td><?php echo $u->gambar ?></td>
+							<td><img src="<?= base_url('asset/img') ?>/<?php echo $u->gambar ?>" alt=""></td>
 							<td class="align-center">
-								<a href="<?= base_url('datamaster/edit')?>/<?= base64_encode($u->id_sarana) ?>" title="">
+								<a href="<?= base_url('datamaster/edit')?>/<?= $u->id_sarana ?>" title="">
 									<button class="btn btn-mini btn-warning"><i class="icon-edit"></i></button></a> |
 								<a href="<?= base_url('dataMasterController/delete_action')?>/<?= $u->id_sarana ?>" title=""><button class="btn btn-mini btn-danger"><i class="icon-trash"></i></button>
 									</a>
@@ -70,3 +70,4 @@
 </div>
 </div><!--/.container-->
 </div><!--/.wrapper-->
+

@@ -5,7 +5,7 @@
 				<h3>Tambah Sarana</h3>
 			</div>
 			<div class="module-body">
-				<form class="form-horizontal row-fluid" method="post" action="<?= base_url('datamasterController/add_action') ?>">
+				<form class="form-horizontal row-fluid" method="post" action="<?= base_url('datamasterController/add_action') ?>" enctype="multipart/form-data">
 					<div class="control-group">
 						<label class="control-label" for="basicinput">ID Sarana</label>
 						<div class="controls">
@@ -46,7 +46,7 @@
 					<div class="control-group">
 						<label class="control-label" for="basicinput">Foto</label>
 						<div class="controls">
-							<input name="foto" class="form-control" type="file" >
+							<input name="foto" class="form-control" type="file" class="file">
 						</div>
 					</div>
 					<div class="control-group">
@@ -63,3 +63,13 @@
 </div><!--/.content-->
 </div><!--/.span9-->
 </div>
+
+<script type="text/javascript">
+  $(document).on('click', '.browse', function(){
+    var file = $(this).parent().parent().parent().find('.file');
+    file.trigger('click');
+  });
+  $(document).on('change', '.file', function(){
+    $(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
+  });
+  </script>

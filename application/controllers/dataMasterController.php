@@ -7,14 +7,10 @@ class DataMasterController extends My_Controller {
 
     function __construct(){
     	parent::__construct();
-
 		//memanggil function dari controller MY_Controller
 		$this->cekLogin();
 
 		//validasi jika session dengan level manager mengakses halaman ini maka akan dialihkan ke halaman manager
-    	if ($this->session->userdata('level') == "upt") {
-    		redirect('home');
-		}
 		$this->load->model('m_datamaster');
 	}
 	public function index()
@@ -33,6 +29,14 @@ class DataMasterController extends My_Controller {
 	}
 
 	public function add_action(){
+
+		$config['upload_path']          = './asset/img';
+		$config['allowed_types']        = 'gif|jpg|png';
+		$config['max_size']             = 100;
+		$config['max_width']            = 1024;
+		$config['max_height']           = 768;
+ 		$this->load->library('upload', $config);
+
 		$data = array(
 			'id_sarana' => $this->input->post('id_sarana'),
 			'nama_sarana' => $this->input->post('nama_sarana'),
@@ -40,11 +44,29 @@ class DataMasterController extends My_Controller {
 			'geo_lon' => $this->input->post('geoLon'),
 			'geo_lat' => $this->input->post('geoLa'),
 			'alamat' => $this->input->post('alamat'),
-			'gambar' => $this->input->post('foto'),
+			'gambar' =>$gambar,
 		);
 		$this->m_datamaster->tambah_data($data);
 
         redirect('datamaster','refresh');
+	}
+
+	public function aksi_upload(){
+		$config['upload_path']          = './asset/img';
+		$config['allowed_types']        = 'gif|jpg|png';
+		$config['max_size']             = 100;
+		$config['max_width']            = 1024;
+		$config['max_height']           = 768;
+ 
+		$this->load->library('upload', $config);
+ 
+		if ( ! $this->upload->do_upload('foto')){
+			$error = array('error' => $this->upload->display_errors());
+			$this->load->view('datamaster/addDataMaster', $error);
+		}else{
+			$data = array('upload_data' => $this->upload->data());
+			$this->load->view('datamaster/datamaster', $data);
+		}
 	}
 
 	public function delete_action($id ='')
@@ -57,8 +79,8 @@ class DataMasterController extends My_Controller {
 
 	public function edit($id = '')
 	{
-		$valid_id = base64_decode($id);
-		$data['t_sarana'] = $this->m_datamaster->select_data($valid_id);
+		
+		$data['t_sarana'] = $this->m_datamaster->select_data($id);
         $this->load->view('template/header');
 		$this->load->view('datamaster/editDataMaster', $data);
 		$this->load->view('template/footer');
